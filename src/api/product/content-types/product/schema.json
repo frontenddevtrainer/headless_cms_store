@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "product"
+    "displayName": "product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,24 @@
       "type": "string",
       "required": true,
       "unique": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "float"
+    },
+    "quantity_available": {
+      "type": "integer",
+      "private": true
+    },
+    "brand": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     }
   }
 }
